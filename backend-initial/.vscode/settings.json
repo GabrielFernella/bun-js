@@ -1,0 +1,13 @@
+{
+  "material-icon-theme.folders.associations": {
+    "core":"rules",
+    "adapters":"pipe",
+    "external":"tools",
+    "usuario": "admin"
+  },
+  "eslint.experimental.useFlatConfig": true,
+  "eslint.runtime": "bun",
+  "eslint.execArgv": ["--bun"],
+  "eslint.trace.server": "messages",
+  "eslint.workingDirectories": [{ "mode": "auto" }]
+}
