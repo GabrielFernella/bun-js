@@ -14,6 +14,14 @@ export default class RepositoryUserPrisma implements RepositoryUsers {
     return this.prisma.usuario.findMany()
   }
 
+  async getUserById(id: string): Promise<Usuario | null> {
+    return this.prisma.usuario.findUnique({
+      where: {
+        id
+      }
+    })
+  }
+
   async getUserByEmail(email: string): Promise<Usuario | null> {
     return this.prisma.usuario.findUnique({
       where: {

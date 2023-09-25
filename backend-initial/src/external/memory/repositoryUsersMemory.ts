@@ -10,6 +10,10 @@ export default class RepositoryUsersMemory implements RepositoryUsers{
     return this.users
   }
 
+  async getUserById(id: string): Promise<Usuario | null> {
+    return this.users.find(index => index.id === id) || null
+  }
+
   async getUserByEmail(email: string): Promise<Usuario | null> {
     return this.users.find(index => index.email === email) || null
   }
